@@ -1,10 +1,14 @@
 SUMMARY=" AnyIO is a asynchronous compatibility API that allows applications and libraries written against it to run unmodified on asyncio, curio and trio."
 LICENSE = "BSD"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=f0e423eea5c91e7aa21bdb70184b3e53"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=c0a769411d2af7894099e8ff75058c9f"
 
 inherit pypi setuptools3
+DEPENDS += " \
+	python3-setuptools-scm-native \
+	"
 
-SRC_URI[sha256sum] = "35075abd32cf20fd7e0be2fee3614e80b92d5392eba257c8d2f33de3df7ca237"
-SRC_URI_append = " \
+SRC_URI[sha256sum] = "a0aeffe2fb1fdf374a8e4b471444f0f3ac4fb9f5a5b542b48824475e0042a5a6"
+
+SRC_URI += " \
 	file://0001-setup.cfg-Create-a-patch-to-set-the-pkg-version-corr.patch \
 "
